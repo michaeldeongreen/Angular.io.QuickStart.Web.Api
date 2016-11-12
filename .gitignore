@@ -1,0 +1,13 @@
+*.user
+
+/.vs
+/packages
+/Angular.io.QuickStart.Web.Api/bin
+/Angular.io.QuickStart.Web.Api/obj
+
+/Angular.io.QuickStart.Web.Api.Models/bin
+/Angular.io.QuickStart.Web.Api.Models/obj
+
+
+/Angular.io.QuickStart.Web.Api.Repository/bin
+/Angular.io.QuickStart.Web.Api.Repository/obj

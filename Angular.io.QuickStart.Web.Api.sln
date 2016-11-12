@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular.io.QuickStart.Web.Api", "Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.csproj", "{C72A2BE2-43C3-48E7-9744-4DC085D3E710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular.io.QuickStart.Web.Api.Models", "Angular.io.QuickStart.Web.Api.Models\Angular.io.QuickStart.Web.Api.Models.csproj", "{79E36E41-B038-4023-A987-F394DA1A3758}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular.io.QuickStart.Web.Api.Repository", "Angular.io.QuickStart.Web.Api.Repository\Angular.io.QuickStart.Web.Api.Repository.csproj", "{93E2F9E9-E984-40ED-9A94-C4311CD703C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C72A2BE2-43C3-48E7-9744-4DC085D3E710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72A2BE2-43C3-48E7-9744-4DC085D3E710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72A2BE2-43C3-48E7-9744-4DC085D3E710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72A2BE2-43C3-48E7-9744-4DC085D3E710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79E36E41-B038-4023-A987-F394DA1A3758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79E36E41-B038-4023-A987-F394DA1A3758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79E36E41-B038-4023-A987-F394DA1A3758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79E36E41-B038-4023-A987-F394DA1A3758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93E2F9E9-E984-40ED-9A94-C4311CD703C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93E2F9E9-E984-40ED-9A94-C4311CD703C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93E2F9E9-E984-40ED-9A94-C4311CD703C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93E2F9E9-E984-40ED-9A94-C4311CD703C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
