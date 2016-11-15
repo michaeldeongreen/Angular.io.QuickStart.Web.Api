@@ -1,4 +1,5 @@
-﻿using Angular.io.QuickStart.Web.Api.Repository.Interfaces;
+﻿using Angular.io.QuickStart.Web.Api.Models;
+using Angular.io.QuickStart.Web.Api.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,17 +10,19 @@ namespace Angular.io.QuickStart.Web.Api.Repository
 {
     public class UoW : IUoW
     {
-        public HeroRepository HeroRepository { get; private set; }
+        private TourOfHeroesContext _dbContext;
 
+        public Repository<Hero> HeroRepository { get; private set; }
 
-        public UoW()
+        public UoW(TourOfHeroesContext dbContext)
         {
-            HeroRepository = new HeroRepository();
+            _dbContext = dbContext;
+            HeroRepository = new Repository<Hero>(_dbContext);
         }
 
-        public bool Save()
+        public int Save()
         {
-            throw new NotImplementedException();
+            return _dbContext.SaveChanges();
         }
     }
 }

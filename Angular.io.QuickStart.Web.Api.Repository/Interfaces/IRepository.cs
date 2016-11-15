@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Angular.io.QuickStart.Web.Api.Repository.Interfaces
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<TEntity>
     {
-        IEnumerable<T> GetAll();
+        IEnumerable<TEntity> GetAll();
     }
 }

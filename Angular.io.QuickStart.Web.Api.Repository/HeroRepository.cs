@@ -10,6 +10,13 @@ namespace Angular.io.QuickStart.Web.Api.Repository
 {
     public class HeroRepository : IRepository<Hero>
     {
+        private TourOfHeroesContext _context;
+
+        public HeroRepository(TourOfHeroesContext context)
+        {
+            _context = context;
+        }
+
         public IEnumerable<Hero> GetAll()
         {
             return new List<Hero>() { new Hero() { Id = 1, Name = "Martin Luther King Jr." }, new Hero() { Id = 2, Name = "Mahatma Gandhi",  }, new Hero() { Id = 3, Name = "Rosa Parks" },

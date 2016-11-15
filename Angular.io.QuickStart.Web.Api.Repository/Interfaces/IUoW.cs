@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Angular.io.QuickStart.Web.Api.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,8 @@ namespace Angular.io.QuickStart.Web.Api.Repository.Interfaces
 {
     public interface IUoW
     {
-        HeroRepository HeroRepository { get; }
+        Repository<Hero> HeroRepository { get; }
 
-        bool Save();
+        int Save();
     }
 }
