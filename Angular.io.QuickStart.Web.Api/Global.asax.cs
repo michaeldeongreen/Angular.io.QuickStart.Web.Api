@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Angular.io.QuickStart.Web.Api.Repository.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,9 @@ namespace Angular.io.QuickStart.Web.Api
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            var uow = DependencyResolver.Current.GetService<IUoW>();
+            DatabaseSeedConfig.CreateSeedData(uow);
         }
     }
 }
