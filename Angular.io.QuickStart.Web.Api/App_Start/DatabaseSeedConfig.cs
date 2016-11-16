@@ -9,7 +9,7 @@ namespace Angular.io.QuickStart.Web.Api
 {
     public static class DatabaseSeedConfig
     {
-        public static void CreateSeedData(IUoW uow)
+        public static void Start(IUoW uow)
         {
             CreateHeroData(uow);
 

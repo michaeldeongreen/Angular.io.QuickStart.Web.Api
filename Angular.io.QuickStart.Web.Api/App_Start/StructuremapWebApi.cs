@@ -17,6 +17,7 @@
 
 using System.Web.Http;
 using Angular.io.QuickStart.Web.Api.DependencyResolution;
+using Angular.io.QuickStart.Web.Api.Repository.Interfaces;
 
 [assembly: WebActivatorEx.PostApplicationStartMethod(typeof(Angular.io.QuickStart.Web.Api.App_Start.StructuremapWebApi), "Start")]
 
@@ -25,6 +26,8 @@ namespace Angular.io.QuickStart.Web.Api.App_Start {
         public static void Start() {
 			var container = StructuremapMvc.StructureMapDependencyScope.Container;
             GlobalConfiguration.Configuration.DependencyResolver = new StructureMapWebApiDependencyResolver(container);
+
+            DatabaseSeedConfig.Start(container.TryGetInstance<IUoW>());
         }
     }
 }
