@@ -26,8 +26,6 @@ namespace Angular.io.QuickStart.Web.Api.App_Start {
         public static void Start() {
 			var container = StructuremapMvc.StructureMapDependencyScope.Container;
             GlobalConfiguration.Configuration.DependencyResolver = new StructureMapWebApiDependencyResolver(container);
-
-            DatabaseSeedConfig.Start(container.TryGetInstance<IUoW>());
         }
     }
 }

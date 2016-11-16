@@ -19,6 +19,7 @@ namespace Angular.io.QuickStart.Web.Api
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-       }
+            DatabaseSeedConfig.Start(DependencyResolver.Current.GetService<IUoW>());
+        }
     }
 }
