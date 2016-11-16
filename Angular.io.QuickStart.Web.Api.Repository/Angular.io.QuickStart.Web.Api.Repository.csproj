@@ -59,10 +59,12 @@
   <ItemGroup>
     <Compile Include="HeroRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\ITest.cs" />
     <Compile Include="Interfaces\IUoW.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="RepositoryRegistry.cs" />
+    <Compile Include="Test.cs" />
     <Compile Include="TourOfHeroesContext.cs" />
     <Compile Include="UoW.cs" />
   </ItemGroup>

@@ -13,14 +13,14 @@ namespace Angular.io.QuickStart.Web.Api.Controllers
     {
         private IUoW _uow;
 
-        public HeroesController(IUoW uow)
+        public HeroesController(ITest test)
         {
-            _uow = uow;
+            var _t = test;
         }
         // GET: api/Heroes
         public IEnumerable<Hero> Get()
         {
-            return _uow.HeroRepository.GetAll();
+            return new List<Hero>() { new Hero() { Id = 1, Name = "Test1" }, new Hero() {Id = 2, Name = "Test2" } };
         }
 
         // GET: api/Heroes/5
