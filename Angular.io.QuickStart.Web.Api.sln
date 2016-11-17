@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular.io.QuickStart.Web.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular.io.QuickStart.Web.Api.Repository", "Angular.io.QuickStart.Web.Api.Repository\Angular.io.QuickStart.Web.Api.Repository.csproj", "{93E2F9E9-E984-40ED-9A94-C4311CD703C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular.io.QuickStart.Web.Api.Services", "Angular.io.QuickStart.Web.Api.Services\Angular.io.QuickStart.Web.Api.Services.csproj", "{A327A470-0252-4C21-8A78-9AADC48CA595}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{93E2F9E9-E984-40ED-9A94-C4311CD703C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93E2F9E9-E984-40ED-9A94-C4311CD703C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93E2F9E9-E984-40ED-9A94-C4311CD703C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A327A470-0252-4C21-8A78-9AADC48CA595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A327A470-0252-4C21-8A78-9AADC48CA595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A327A470-0252-4C21-8A78-9AADC48CA595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A327A470-0252-4C21-8A78-9AADC48CA595}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

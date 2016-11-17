@@ -202,7 +202,6 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HeroesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyResolver.cs" />
@@ -273,6 +272,10 @@
     <ProjectReference Include="..\Angular.io.QuickStart.Web.Api.Repository\Angular.io.QuickStart.Web.Api.Repository.csproj">
       <Project>{93e2f9e9-e984-40ed-9a94-c4311cd703c7}</Project>
       <Name>Angular.io.QuickStart.Web.Api.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Angular.io.QuickStart.Web.Api.Services\Angular.io.QuickStart.Web.Api.Services.csproj">
+      <Project>{A327A470-0252-4C21-8A78-9AADC48CA595}</Project>
+      <Name>Angular.io.QuickStart.Web.Api.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

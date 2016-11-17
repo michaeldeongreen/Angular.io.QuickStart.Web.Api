@@ -1,0 +1,15 @@
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\bin\Debug\Angular.io.QuickStart.Web.Api.Services.dll
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\bin\Debug\Angular.io.QuickStart.Web.Api.Services.pdb
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\bin\Debug\Angular.io.QuickStart.Web.Api.Models.dll
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\bin\Debug\Angular.io.QuickStart.Web.Api.Repository.dll
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\bin\Debug\EntityFramework.dll
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\bin\Debug\StructureMap.dll
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\bin\Debug\StructureMap.Net4.dll
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\bin\Debug\Angular.io.QuickStart.Web.Api.Models.pdb
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\bin\Debug\Angular.io.QuickStart.Web.Api.Repository.pdb
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\bin\Debug\EntityFramework.xml
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\bin\Debug\StructureMap.pdb
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\bin\Debug\StructureMap.Net4.pdb
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\obj\Debug\Angular.io.QuickStart.Web.Api.Services.csprojResolveAssemblyReference.cache
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\obj\Debug\Angular.io.QuickStart.Web.Api.Services.dll
+C:\Git\Angular.io.QuickStart.Web.Api\Angular.io.QuickStart.Web.Api.Services\obj\Debug\Angular.io.QuickStart.Web.Api.Services.pdb

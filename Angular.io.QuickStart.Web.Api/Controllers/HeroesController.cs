@@ -1,5 +1,7 @@
 ﻿using Angular.io.QuickStart.Web.Api.Models;
+using Angular.io.QuickStart.Web.Api.Models.DTO;
 using Angular.io.QuickStart.Web.Api.Repository.Interfaces;
+using Angular.io.QuickStart.Web.Api.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,27 +13,28 @@ namespace Angular.io.QuickStart.Web.Api.Controllers
 {
     public class HeroesController : ApiController
     {
-        private IUoW _uow;
+        private HeroService _heroService;
 
-        public HeroesController(IUoW uow)
+        public HeroesController(HeroService heroService)
         {
-            _uow = uow;
+            _heroService = heroService;
         }
         // GET: api/Heroes
-        public IEnumerable<Hero> Get()
+        public IQueryable<Hero> Get()
         {
-            return _uow.HeroRepository.GetAll();
+            return _heroService.GetAll();
         }
 
         // GET: api/Heroes/5
-        public string Get(int id)
+        public Hero Get(int id)
         {
-            return "value";
+            return _heroService.GetById(id);
         }
 
         // POST: api/Heroes
-        public void Post([FromBody]string value)
+        public void Post([FromBody]HeroDTO hero)
         {
+            _heroService.Add(hero);
         }
 
         // PUT: api/Heroes/5

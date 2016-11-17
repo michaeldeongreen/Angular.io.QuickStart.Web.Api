@@ -23,6 +23,11 @@ namespace Angular.io.QuickStart.Web.Api.Repository
         {
             return _dbSet;
         }
+
+        public TEntity Get(object id)
+        {
+            return _dbSet.Find(id);
+        }
     
         public void Add(TEntity entity)
         {
