@@ -12,10 +12,12 @@ namespace Angular.io.QuickStart.Web.Api.Services
     public class HeroService
     {
         private IUoW _uow;
+        private HeroValidationService _heroValidationService;
 
-        public HeroService(IUoW uow)
+        public HeroService(IUoW uow, HeroValidationService heroValidationService)
         {
             _uow = uow;
+            _heroValidationService = heroValidationService;
         }
 
         public IQueryable<Hero> GetAll()
@@ -28,9 +30,16 @@ namespace Angular.io.QuickStart.Web.Api.Services
             return _uow.HeroRepository.Get(id);
         }
 
-        public void Add(HeroDTO heroDto)
+        public IEnumerable<Hero> Get(string name)
         {
-            _uow.HeroRepository.Add(new Hero() { Name = heroDto.Name });
+            _heroValidationService.SearchValidation(new HeroDTO() { Name = name });
+            return _uow.HeroRepository.Get((x) => x.Name.ToLower().Contains(name.ToLower()));
+        }
+
+        public void Add(HeroDTO hero)
+        {
+            _heroValidationService.AddValidation(hero);
+            _uow.HeroRepository.Add(new Hero() { Name = hero.Name });
             Save();
         }
 

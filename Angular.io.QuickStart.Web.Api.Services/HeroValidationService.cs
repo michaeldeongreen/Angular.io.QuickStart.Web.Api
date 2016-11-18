@@ -17,10 +17,17 @@ namespace Angular.io.QuickStart.Web.Api.Services
         {
             _uow = uow;
         }
-        public void Validate(HeroDTO hero)
+        public void AddValidation(HeroDTO hero)
         {
             _hero = hero;
             HeroNotNull();
+            HeroNameNotNullOrEmpty();
+            HeroNameUnique();
+        }
+
+        public void SearchValidation(HeroDTO hero)
+        {
+            _hero = hero;
             HeroNameNotNullOrEmpty();
         }
 
@@ -38,6 +45,8 @@ namespace Angular.io.QuickStart.Web.Api.Services
 
         private void HeroNameUnique()
         {
+            if (_uow.HeroRepository.Get((x) => x.Name == _hero.Name).Count() > 0)
+                throw new Exception(string.Format("The name {0} already exists.",_hero.Name));
         }
     }
 }
