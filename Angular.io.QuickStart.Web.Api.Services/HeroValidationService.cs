@@ -34,19 +34,19 @@ namespace Angular.io.QuickStart.Web.Api.Services
         private void HeroNotNull()
         {
             if (_hero == null)
-                throw new Exception("Hero cannot be null.");
+                throw new ServiceValidationException("Hero cannot be null.");
         }
 
         private void HeroNameNotNullOrEmpty()
         {
             if (string.IsNullOrEmpty(_hero.Name))
-                throw new Exception("Hero name is required");
+                throw new ServiceValidationException("Hero name is required");
         }
 
         private void HeroNameUnique()
         {
             if (_uow.HeroRepository.Get((x) => x.Name == _hero.Name).Count() > 0)
-                throw new Exception(string.Format("The name {0} already exists.",_hero.Name));
+                throw new ServiceValidationException(string.Format("The name {0} already exists.",_hero.Name));
         }
     }
 }

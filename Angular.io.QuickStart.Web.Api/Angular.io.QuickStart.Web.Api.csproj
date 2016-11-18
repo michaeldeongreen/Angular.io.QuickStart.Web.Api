@@ -165,6 +165,7 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionFilters\WebApiExceptionFilterAttribute.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\DatabaseSeedConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />

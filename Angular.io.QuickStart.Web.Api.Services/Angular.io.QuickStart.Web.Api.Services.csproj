@@ -52,6 +52,7 @@
     <Compile Include="HeroValidationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicesRegistry.cs" />
+    <Compile Include="ServiceValidationException.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Angular.io.QuickStart.Web.Api.Models\Angular.io.QuickStart.Web.Api.Models.csproj">

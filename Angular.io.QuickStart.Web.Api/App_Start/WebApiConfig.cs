@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Serialization;
+﻿using Angular.io.QuickStart.Web.Api.ActionFilters;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,9 @@ namespace Angular.io.QuickStart.Web.Api
 
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
+
+            //filter
+            config.Filters.Add(new WebApiExceptionFilterAttribute());
 
             // Web API routes
             config.MapHttpAttributeRoutes();
