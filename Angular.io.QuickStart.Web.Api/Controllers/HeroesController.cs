@@ -20,15 +20,15 @@ namespace Angular.io.QuickStart.Web.Api.Controllers
             _heroService = heroService;
         }
         // GET: api/Heroes
-        public IQueryable<Hero> Get()
+        public IHttpActionResult Get()
         {
-            return _heroService.GetAll();
+            return Ok(_heroService.GetAll());
         }
 
         // GET: api/Heroes/5
-        public Hero Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return _heroService.Get(id);
+            return Ok(_heroService.Get(id));
         }
 
         // POST: api/Heroes
