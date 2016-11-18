@@ -14,10 +14,12 @@ namespace Angular.io.QuickStart.Web.Api.Controllers
     public class HeroesController : ApiController
     {
         private HeroService _heroService;
+        private HeroValidationService _heroValidationService;
 
-        public HeroesController(HeroService heroService)
+        public HeroesController(HeroService heroService, HeroValidationService heroValidationService)
         {
             _heroService = heroService;
+            _heroValidationService = heroValidationService;
         }
         // GET: api/Heroes
         public IQueryable<Hero> Get()
@@ -28,7 +30,7 @@ namespace Angular.io.QuickStart.Web.Api.Controllers
         // GET: api/Heroes/5
         public Hero Get(int id)
         {
-            return _heroService.GetById(id);
+            return _heroService.Get(id);
         }
 
         // POST: api/Heroes
@@ -45,6 +47,7 @@ namespace Angular.io.QuickStart.Web.Api.Controllers
         // DELETE: api/Heroes/5
         public void Delete(int id)
         {
+            _heroService.Delete(id);
         }
     }
 }

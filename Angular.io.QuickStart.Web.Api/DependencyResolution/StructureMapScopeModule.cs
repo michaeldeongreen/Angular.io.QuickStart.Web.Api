@@ -4,6 +4,9 @@ namespace Angular.io.QuickStart.Web.Api.DependencyResolution {
     using Angular.io.QuickStart.Web.Api.App_Start;
 
     using StructureMap.Web.Pipeline;
+    using Repository.Interfaces;
+    using System.Web.Mvc;
+    using System.Diagnostics;
 
     public class StructureMapScopeModule : IHttpModule {
         #region Public Methods and Operators
@@ -18,7 +21,6 @@ namespace Angular.io.QuickStart.Web.Api.DependencyResolution {
                 StructuremapMvc.StructureMapDependencyScope.DisposeNestedContainer();
             };
         }
-
         #endregion
     }
 }

@@ -23,7 +23,7 @@ namespace Angular.io.QuickStart.Web.Api.Services
             return _uow.HeroRepository.GetAll();
         }
 
-        public Hero GetById(int id)
+        public Hero Get(int id)
         {
             return _uow.HeroRepository.Get(id);
         }
@@ -31,6 +31,17 @@ namespace Angular.io.QuickStart.Web.Api.Services
         public void Add(HeroDTO heroDto)
         {
             _uow.HeroRepository.Add(new Hero() { Name = heroDto.Name });
+            Save();
+        }
+
+        public void Delete(int id)
+        {
+            _uow.HeroRepository.Delete(id);
+            Save();
+        }
+
+        private void Save()
+        {
             _uow.Save();
         }
     }

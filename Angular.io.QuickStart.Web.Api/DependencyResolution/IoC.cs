@@ -18,6 +18,7 @@
 
 namespace Angular.io.QuickStart.Web.Api.DependencyResolution {
     using Repository;
+    using Services;
     using StructureMap;
     using StructureMap.Configuration.DSL;
 
@@ -26,6 +27,7 @@ namespace Angular.io.QuickStart.Web.Api.DependencyResolution {
             var registry = new Registry();
             registry.IncludeRegistry<DefaultRegistry>();
             registry.IncludeRegistry<RepositoryRegistry>();
+            registry.IncludeRegistry<ServicesRegistry>();
 
             return new Container(registry);
         }
