@@ -14,12 +14,10 @@ namespace Angular.io.QuickStart.Web.Api.Controllers
     public class HeroesController : ApiController
     {
         private HeroService _heroService;
-        private HeroValidationService _heroValidationService;
 
-        public HeroesController(HeroService heroService, HeroValidationService heroValidationService)
+        public HeroesController(HeroService heroService)
         {
             _heroService = heroService;
-            _heroValidationService = heroValidationService;
         }
         // GET: api/Heroes
         public IQueryable<Hero> Get()
