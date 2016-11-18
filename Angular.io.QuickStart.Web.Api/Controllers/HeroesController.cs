@@ -31,6 +31,11 @@ namespace Angular.io.QuickStart.Web.Api.Controllers
             return Ok(_heroService.Get(id));
         }
 
+        public IHttpActionResult Get(string name)
+        {
+            return Ok(_heroService.Get(name));
+        }
+
         // POST: api/Heroes
         public void Post([FromBody]HeroDTO hero)
         {
