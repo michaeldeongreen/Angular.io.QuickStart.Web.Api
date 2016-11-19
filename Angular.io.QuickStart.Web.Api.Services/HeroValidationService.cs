@@ -40,6 +40,13 @@ namespace Angular.io.QuickStart.Web.Api.Services
             HeroIdValid();
         }
 
+        public void DeleteValidation(HeroDTO hero)
+        {
+            _hero = hero;
+            HeroNotNull();
+            HeroIdValid();
+        }
+
         private void HeroNotNull()
         {
             if (_hero == null)

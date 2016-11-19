@@ -45,6 +45,8 @@ namespace Angular.io.QuickStart.Web.Api.Services
 
         public void Delete(int id)
         {
+
+            _heroValidationService.DeleteValidation(new HeroDTO() { Id = id });
             _uow.HeroRepository.Delete(id);
             Save();
         }
