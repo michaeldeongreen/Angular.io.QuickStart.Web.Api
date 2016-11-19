@@ -19,35 +19,61 @@ namespace Angular.io.QuickStart.Web.Api.Controllers
         {
             _heroService = heroService;
         }
+
+        /// <summary>
+        /// Endpoint is used to get all heroes in the application
+        /// </summary>
+        /// <returns>List of Heroes</returns>
         // GET: api/Heroes
-        public IHttpActionResult Get()
+        public IQueryable<Hero> Get()
         {
-            return Ok(_heroService.GetAll());
+            return _heroService.GetAll();
         }
 
+        /// <summary>
+        /// Endpoint is used to get a hero by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Hero that matches the id parameter</returns>
         // GET: api/Heroes/5
-        public IHttpActionResult Get(int id)
+        public Hero Get(int id)
         {
-            return Ok(_heroService.Get(id));
+            return _heroService.Get(id);
         }
 
+        /*
         public IHttpActionResult Get(string name)
         {
             return Ok(_heroService.Get(name));
         }
+        */
 
+        /// <summary>
+        /// Endpoint used to create a new hero
+        /// </summary>
+        /// <param name="hero"></param>
         // POST: api/Heroes
         public void Post([FromBody]HeroDTO hero)
         {
             _heroService.Add(hero);
         }
 
+
+        /// <summary>
+        /// Endpoint used to update the name of a hero
+        /// </summary>
+        /// <param name="hero"></param>
         // PUT: api/Heroes/5
         public void Put([FromBody]HeroDTO hero)
         {
             _heroService.Update(hero);
         }
 
+
+        /// <summary>
+        /// Endpoint used to delete a hero by id
+        /// </summary>
+        /// <param name="id"></param>
         // DELETE: api/Heroes/5
         public void Delete(int id)
         {
