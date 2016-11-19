@@ -43,8 +43,9 @@ namespace Angular.io.QuickStart.Web.Api.Controllers
         }
 
         // PUT: api/Heroes/5
-        public void Put(int id, [FromBody]string value)
+        public void Put([FromBody]HeroDTO hero)
         {
+            _heroService.Update(hero);
         }
 
         // DELETE: api/Heroes/5

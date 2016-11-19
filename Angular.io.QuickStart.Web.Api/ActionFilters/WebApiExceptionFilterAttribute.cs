@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http.Filters;
+using Newtonsoft.Json;
 
 namespace Angular.io.QuickStart.Web.Api.ActionFilters
 {
@@ -16,7 +17,7 @@ namespace Angular.io.QuickStart.Web.Api.ActionFilters
             if (actionExecutedContext.Exception is ServiceValidationException)
             {
                 var response = new HttpResponseMessage(HttpStatusCode.BadRequest);
-                response.Content = new StringContent(actionExecutedContext.Exception.Message);
+                response.Content = new StringContent(JsonConvert.SerializeObject(actionExecutedContext.Exception.Message));
                 actionExecutedContext.Response = response;
             }
             else

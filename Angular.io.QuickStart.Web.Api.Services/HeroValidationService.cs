@@ -31,6 +31,15 @@ namespace Angular.io.QuickStart.Web.Api.Services
             HeroNameNotNullOrEmpty();
         }
 
+        public void UpdateValidation(HeroDTO hero)
+        {
+            _hero = hero;
+            HeroNotNull();
+            HeroNameNotNullOrEmpty();
+            HeroNameUnique();
+            HeroIdValid();
+        }
+
         private void HeroNotNull()
         {
             if (_hero == null)
@@ -40,13 +49,22 @@ namespace Angular.io.QuickStart.Web.Api.Services
         private void HeroNameNotNullOrEmpty()
         {
             if (string.IsNullOrEmpty(_hero.Name))
-                throw new ServiceValidationException("Hero name is required");
+                throw new ServiceValidationException("Hero name is required.");
         }
 
         private void HeroNameUnique()
         {
             if (_uow.HeroRepository.Get((x) => x.Name == _hero.Name).Count() > 0)
                 throw new ServiceValidationException(string.Format("The name {0} already exists.",_hero.Name));
+        }
+
+        private void HeroIdValid()
+        {
+            if (_hero.Id == 0)
+                throw new ServiceValidationException("Invalid hero id.");
+
+            if (_uow.HeroRepository.Get((x) => x.Id == _hero.Id).Count() == 0)
+                throw new ServiceValidationException("hero id does not exist.");
         }
     }
 }

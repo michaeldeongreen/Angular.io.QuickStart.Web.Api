@@ -11,12 +11,12 @@ namespace Angular.io.QuickStart.Web.Api.Repository
 {
     public class Repository<TEntity> where TEntity : class
     {
-        private TourOfHeroesContext _dboContext;
+        private TourOfHeroesContext _dbContext;
         private DbSet<TEntity> _dbSet;
 
         public Repository(TourOfHeroesContext dbContext)
         {
-            _dboContext = dbContext;
+            _dbContext = dbContext;
             _dbSet = dbContext.Set<TEntity>();
         }
 
@@ -55,12 +55,17 @@ namespace Angular.io.QuickStart.Web.Api.Repository
 
         public virtual void Delete(TEntity entity)
         {
-            if (_dboContext.Entry(entity).State == EntityState.Detached)
+            if (_dbContext.Entry(entity).State == EntityState.Detached)
             {
                 _dbSet.Attach(entity);
             }
             _dbSet.Remove(entity);
         }
 
+        public virtual void Update(TEntity entity)
+        {
+            _dbSet.Attach(entity);
+            _dbContext.Entry(entity).State = EntityState.Modified;
+        }
     }
 }

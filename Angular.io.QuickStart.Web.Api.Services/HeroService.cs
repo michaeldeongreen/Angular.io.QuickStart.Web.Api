@@ -49,6 +49,16 @@ namespace Angular.io.QuickStart.Web.Api.Services
             Save();
         }
 
+        public void Update(HeroDTO hero)
+        {
+            _heroValidationService.UpdateValidation(hero);
+            Hero heroToUpdate = _uow.HeroRepository.Get(hero.Id);
+
+            heroToUpdate.Name = hero.Name;
+            _uow.HeroRepository.Update(heroToUpdate);
+            Save();
+        }
+
         private void Save()
         {
             _uow.Save();
