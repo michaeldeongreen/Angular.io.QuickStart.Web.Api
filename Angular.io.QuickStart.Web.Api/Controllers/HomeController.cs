@@ -10,7 +10,7 @@ namespace Angular.io.QuickStart.Web.Api.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Angular 2 Tour of Heroes Web API";
 
             return View();
         }
