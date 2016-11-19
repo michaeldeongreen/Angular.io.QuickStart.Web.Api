@@ -41,13 +41,6 @@ namespace Angular.io.QuickStart.Web.Api.Controllers
             return _heroService.Get(id);
         }
 
-        /*
-        public IHttpActionResult Get(string name)
-        {
-            return Ok(_heroService.Get(name));
-        }
-        */
-
         /// <summary>
         /// Endpoint used to create a new hero
         /// </summary>

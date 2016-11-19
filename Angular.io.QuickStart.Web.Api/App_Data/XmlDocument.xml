@@ -512,6 +512,13 @@
             </summary>
             <param name="id"></param>
         </member>
+        <member name="M:Angular.io.QuickStart.Web.Api.Controllers.HeroesSearchController.Get(System.String)">
+            <summary>
+            Endpoint is used to get all heroes whose name contains the name parameter
+            </summary>
+            <param name="name"></param>
+            <returns>List of heroes whose name contains the name parameter</returns>
+        </member>
         <member name="T:Angular.io.QuickStart.Web.Api.DependencyResolution.StructureMapDependencyResolver">
             <summary>
             The structure map dependency resolver.
