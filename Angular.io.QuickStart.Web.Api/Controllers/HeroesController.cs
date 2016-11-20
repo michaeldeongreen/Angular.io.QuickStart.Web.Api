@@ -45,10 +45,11 @@ namespace Angular.io.QuickStart.Web.Api.Controllers
         /// Endpoint used to create a new hero
         /// </summary>
         /// <param name="hero"></param>
+        /// <returns>The new hero</returns>
         // POST: api/Heroes
-        public void Post([FromBody]HeroDTO hero)
+        public Hero Post([FromBody]HeroDTO hero)
         {
-            _heroService.Add(hero);
+            return _heroService.Add(hero);
         }
 
 

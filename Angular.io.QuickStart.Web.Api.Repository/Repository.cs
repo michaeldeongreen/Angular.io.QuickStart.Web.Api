@@ -42,9 +42,9 @@ namespace Angular.io.QuickStart.Web.Api.Repository
             return query.ToList();
         }
     
-        public virtual void Add(TEntity entity)
+        public virtual TEntity Add(TEntity entity)
         {
-            _dbSet.Add(entity);
+            return _dbSet.Add(entity);
         }
 
         public virtual void Delete(object id)

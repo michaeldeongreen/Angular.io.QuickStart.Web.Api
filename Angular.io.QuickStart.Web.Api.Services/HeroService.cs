@@ -36,11 +36,13 @@ namespace Angular.io.QuickStart.Web.Api.Services
             return _uow.HeroRepository.Get((x) => x.Name.ToLower().Contains(name.ToLower()));
         }
 
-        public void Add(HeroDTO hero)
+        public Hero Add(HeroDTO hero)
         {
             _heroValidationService.AddValidation(hero);
-            _uow.HeroRepository.Add(new Hero() { Name = hero.Name });
+           var newHero  = _uow.HeroRepository.Add(new Hero() { Name = hero.Name });
             Save();
+
+            return newHero;
         }
 
         public void Delete(int id)

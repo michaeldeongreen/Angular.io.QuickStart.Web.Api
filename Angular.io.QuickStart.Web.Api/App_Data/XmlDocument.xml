@@ -22,6 +22,7 @@
             Endpoint used to create a new hero
             </summary>
             <param name="hero"></param>
+            <returns>The new hero</returns>
         </member>
         <member name="M:Angular.io.QuickStart.Web.Api.Controllers.HeroesController.Put(Angular.io.QuickStart.Web.Api.Models.DTO.HeroDTO)">
             <summary>
