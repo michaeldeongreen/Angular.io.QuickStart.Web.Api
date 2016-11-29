@@ -61,7 +61,7 @@ namespace Angular.io.QuickStart.Web.Api.Services
 
         private void HeroNameUnique()
         {
-            if (_uow.HeroRepository.Get((x) => x.Name == _hero.Name).Count() > 0)
+            if (_uow.HeroRepository.Find((x) => x.Name == _hero.Name).Count() > 0)
                 throw new ServiceValidationException(string.Format("The name {0} already exists.",_hero.Name));
         }
 
@@ -70,7 +70,7 @@ namespace Angular.io.QuickStart.Web.Api.Services
             if (_hero.Id == 0)
                 throw new ServiceValidationException("Invalid hero id.");
 
-            if (_uow.HeroRepository.Get((x) => x.Id == _hero.Id).Count() == 0)
+            if (_uow.HeroRepository.Find((x) => x.Id == _hero.Id).Count() == 0)
                 throw new ServiceValidationException("hero id does not exist.");
         }
     }

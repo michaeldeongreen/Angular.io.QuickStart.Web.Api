@@ -30,7 +30,7 @@ namespace Angular.io.QuickStart.Web.Api.Repository
             return _dbSet.Find(id);
         }
 
-        public virtual IEnumerable<TEntity> Get(Expression<Func<TEntity,bool>> filter)
+        public virtual IEnumerable<TEntity> Find(Expression<Func<TEntity,bool>> filter)
         {
             IQueryable<TEntity> query = _dbSet;
 
@@ -41,7 +41,19 @@ namespace Angular.io.QuickStart.Web.Api.Repository
 
             return query.ToList();
         }
-    
+
+        public virtual async Task<IEnumerable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> filter)
+        {
+            IQueryable<TEntity> query = _dbSet;
+
+            if (filter != null)
+            {
+                query = _dbSet.Where(filter);
+            }
+
+            return await query.ToListAsync();
+        }
+
         public virtual TEntity Add(TEntity entity)
         {
             return _dbSet.Add(entity);

@@ -30,10 +30,17 @@ namespace Angular.io.QuickStart.Web.Api.Services
             return _uow.HeroRepository.Get(id);
         }
 
-        public IEnumerable<Hero> Get(string name)
+        public IEnumerable<Hero> Find(string name)
         {
             _heroValidationService.SearchValidation(new HeroDTO() { Name = name });
-            return _uow.HeroRepository.Get((x) => x.Name.ToLower().Contains(name.ToLower()));
+            return _uow.HeroRepository.Find((x) => x.Name.ToLower().Contains(name.ToLower()));
+        }
+
+        public async Task<IEnumerable<Hero>> FindAsync(string name)
+        {
+            _heroValidationService.SearchValidation(new HeroDTO() { Name = name });
+
+            return await _uow.HeroRepository.FindAsync((x) => x.Name.ToLower().Contains(name.ToLower()));
         }
 
         public Hero Add(HeroDTO hero)
