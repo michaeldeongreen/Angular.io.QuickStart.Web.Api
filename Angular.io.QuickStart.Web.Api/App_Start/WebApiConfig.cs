@@ -13,10 +13,6 @@ namespace Angular.io.QuickStart.Web.Api
     {
         public static void Register(HttpConfiguration config)
         {
-            //cors
-            var cors = new EnableCorsAttribute("*","*","*");
-            config.EnableCors(cors);
-
             //json formatter
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
 
